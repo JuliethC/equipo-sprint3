@@ -2,8 +2,8 @@ package com.nancy.backend.controllers;
 
 import java.util.List;
 
-import com.nancy.backend.documents.Product;
-import com.nancy.backend.services.ProductService;
+import com.nancy.backend.documents.Detail;
+import com.nancy.backend.services.DetailService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,21 +15,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/api/products")
+@RequestMapping(path = "/api/details")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST})
-public class ProductController {
-
+public class DetailController {
+    
     @Autowired
-    private ProductService productService;
-
+    private DetailService detailService;
+    
     @GetMapping
-    public List<Product> findAll() {
-        return productService.findAll();
+    public List<Detail> findAll() {
+        return detailService.findAll();
     }
-
+    
     @PostMapping
-    public Product save(@RequestBody Product product) {
-        return productService.save(product);
+    public Detail save(@RequestBody Detail detail) {
+        return detailService.save(detail);
     }
     
 }
