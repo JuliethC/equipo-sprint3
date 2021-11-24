@@ -12,16 +12,16 @@ public class Invoice implements Serializable {
     @Id
     private Long id;
     private LocalDate date;
-    private Customer customer;
+    private User user;
 
     public Invoice() {
 
     }
 
-    public Invoice(Long id, LocalDate date, Customer customer) {
+    public Invoice(Long id, LocalDate date, User User) {
         this.id = id;
         this.date = date;
-        this.customer = customer;
+        this.user = user;
     }
 
     public Long getId() {
@@ -40,12 +40,12 @@ public class Invoice implements Serializable {
         this.date = date;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public User getUser() {
+        return user;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setUser(User user) {
+        this.user = user;
     }
 
 }
