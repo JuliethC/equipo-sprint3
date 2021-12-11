@@ -1,13 +1,14 @@
 import React from "react";
 import NavBar from "../NavBar";
 
-const Home = () => {
+const Contacto = () => {
+
     return(
         <div>
             <NavBar/>
-            <h1> Home ..</h1>
+            <h1> contacto</h1>
         </div>
     )
 }
 
-export default Home
+export default Contacto
