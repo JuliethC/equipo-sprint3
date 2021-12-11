@@ -22,10 +22,10 @@ public class BackendApplication {
 		
 		@Override
 		protected void configure(HttpSecurity httpSecurity) throws Exception {
-			httpSecurity.csrf().disable().addFilterAfter(new JwtAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class).authorizeRequests()
-					.antMatchers(HttpMethod.OPTIONS).permitAll()
-					.antMatchers(HttpMethod.POST, "/api/users", "/api/users/login").permitAll()
-					.anyRequest().authenticated();
+		// 	httpSecurity.csrf().disable().addFilterAfter(new JwtAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class).authorizeRequests()
+		// 			.antMatchers(HttpMethod.OPTIONS).permitAll()
+		// 			.antMatchers(HttpMethod.POST, "/api/users", "/api/users/login").permitAll()
+		// 			.anyRequest().authenticated();
 		
 		}
 	}
