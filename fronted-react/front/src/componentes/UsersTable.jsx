@@ -1,8 +1,10 @@
-import React,{useEffect,useState} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import * as ReactBootStrap from "react-bootstrap";
 
-const UserTable =() =>{
+
+const UsersTable =() =>{
+
     const [posts,setPosts]= useState({blogs:[]})
     
     useEffect(() => {
@@ -26,7 +28,7 @@ const UserTable =() =>{
                  
                  <th>Id</th>
                  <th>Nombre</th>
-                 <th>Dirección</th>
+                 <th>DIreccion</th>
                  <th>Acciones</th>
                </tr>
             </thead>
@@ -35,7 +37,7 @@ const UserTable =() =>{
                       posts.blogs.map((item)=>(
                        <tr key={item.id}>
                         <td>{item.id}</td>
-                        <td>{item.name} </td>
+                        <td>{item.name}</td>
                         <td>{item.address}</td>
                         <td><button className="btn btn-primary">
                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
@@ -55,4 +57,4 @@ const UserTable =() =>{
     )
 }
 
-export default UserTable;
+export default UsersTable;

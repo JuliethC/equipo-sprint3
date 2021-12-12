@@ -12,8 +12,8 @@ const NavBar = () => {
         <Link to= "/" className="nav-link">
             Home
             </Link>
-        <Link to= "/cliente" className="nav-link">
-            Cliente
+        <Link to= "/Users" className="nav-link">
+            Usuarios
             </Link>
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
           <NavDropdown.Item ><Link to= "/contacto" className="basic-navbar-nav">
@@ -43,3 +43,5 @@ const NavBar = () => {
 }
 
 export default NavBar
+
+           

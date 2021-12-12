@@ -1,12 +1,14 @@
-import  React from 'react'
-import UserTable from "../UserTable"
-const Users = () => {
-    return (
+import React from "react";
+import UsersTable from "../UsersTable.jsx";
+import NavBar from "../NavBar.jsx";
+
+const Cliente = () => {
+    return(
         <div>
              <NavBar/>
-            <UserTable/>
+            <UsersTable/>
         </div>
     )
 }
 
-export default Users;
+export default Cliente
